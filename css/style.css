@@ -1676,12 +1676,10 @@ h4 {
     font-size: 20px;
 }
 
-.cake_size {
+.time-tour {
     line-height: 50px;
-    width: 100px;
     background-color: #4c2121;
     text-align: center;
-    padding: 10px;
 }
 
 .cake1_size p {
@@ -1747,4 +1745,31 @@ h4 {
 }
 .gia{
     color: red;
+}
+
+/*  */
+.menu ul {
+    display: none;
+    position: absolute;
+    padding-right: 10px;
+    margin: -33px;
+    background-color: white;
+    z-index: 1000;
+    border-radius: 15px;
+}
+
+.menu > li:hover > ul {
+    display: block;
+}
+
+.menu ul li:hover > ul {
+    display: block;
+    position: relative;
+    padding: 15px;
+ 
+}
+
+.menu ul li {
+    position: relative;
+    padding: 10px;
 }
