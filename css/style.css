@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 body {
-    font-family: 'Poppins', sans-serif;
-    text-rendering: optimizeLegibility !important;
     background: #f3f3f5;
 }
 
@@ -512,7 +510,7 @@ ul {
     top: 60px;
     max-width: 150px;
     pointer-events: none;
-    filter: blur(3px);
+    /* filter: blur(3px); */
 }
 
 .banner-shape-2 {
@@ -1544,12 +1542,20 @@ p {
 .about1 {
     margin-left: 10px;
     border-radius: 5px 5px 5px 5px;
-    border: 2px solid blueviolet;
-    box-shadow: 2px 2px 5px violet;
+    border: 2px solid #ff8243;
+    box-shadow: 2px 2px 5px #ffe043;
     padding: 10px;
     margin-top: 20px;
 }
-
+.about2 {
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px 5px 5px 5px;
+    border: 2px solid #ff8243;
+    box-shadow: 2px 2px 5px #ffe043;
+    padding: 10px;
+    margin-top: 20px;
+}
 .img1 {
     border-radius: 20px;
 }
@@ -1557,37 +1563,6 @@ p {
 .bg1 {
     background-image: url(../images/about-bg.png);
     color: black;
-}
-
-.about2 {
-    text-align: center;
-    margin: auto;
-}
-
-.gtthanhvien {
-    padding-top: 20px;
-}
-
-.liTVien {
-    text-align: center;
-    margin: 40px;
-    padding: 10px;
-    border: 1px solid whitesmoke;
-    box-shadow: 2px 5px 10px gray;
-}
-
-.thanhvien :hover {
-    border-radius: 50px;
-    transition: all 500ms;
-}
-
-.liTVien:hover {
-    margin: 50px;
-}
-
-.thanhvien {
-    width: 50%;
-    margin: auto;
 }
 
 h4 {
@@ -1598,7 +1573,7 @@ h4 {
 .tintuc {
     text-align: center;
     min-height: 340px;
-    height: 80vh;
+    height: 50vh;
     border: 1px solid gray;
     border-radius: 50px;
     background-color: white;
