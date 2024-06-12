@@ -92,14 +92,21 @@ $(document).ready(function($) {
         count++;
         num.innerText = count;
         console.log(count);
+        localStorage.setItem('numValue', count);
     });
     minus.addEventListener("click", () => {
         if (count > 1) {
             count--;
             num.innerText = count;
             console.log(count);
+            localStorage.setItem('numValue', count);
         }
     });
+    const savedCount = localStorage.getItem('numValue');
+    if (savedCount) {
+        count = parseInt(savedCount, 10);
+        num.innerText = count;
+    }
 
 });
 

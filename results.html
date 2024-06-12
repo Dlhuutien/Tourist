@@ -20,7 +20,10 @@
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <!-- custom css  -->
     <link rel="stylesheet" href="./css/style.css">
-    
+    <script src="./js/ChiTietSP.js"></script>
+
+
+  
     
 </head>
 
@@ -71,14 +74,6 @@
                                     <i class="uil uil-search"></i>
                                 </button>
                             </form>
-                            <a href="javascript:void(0)" class="header-btn header-cart" data-toggle='modal'
-                                data-target='#shopping-cart'>
-                                <i class="uil uil-shopping-bag"></i>
-                                <!-- <span class="cart-number">4</span> -->
-                            </a>
-                            <!-- <a href="javascript:void(0)" class="header-btn" data-toggle='modal' data-target='#login'>
-                                <i class="uil uil-user-md"></i>
-                            </a> -->
                         </div>
                     </div>
                 </div>
@@ -98,7 +93,7 @@
                     <div class="row img_cake">
                         <div class="col-lg-6">
                             <div class="cake-title">
-                                <h1 class="cake-title">Chi tiết tour</h1>
+                                <h1 class="cake-title" style="color: #ff8243;">Chi tiết tour</h1>
                             </div>
                             <div class="cake-box text-center">
                                 <div class="cake_img">
@@ -123,7 +118,7 @@
                                 <div class="cake-title">Số lượng vé
                                     <div class="wrapper">
                                         <span class="minus">-</span>
-                                        <span class="num">1</span>
+                                        <span class="num" id="num">1</span>
                                         <span class="plus">+</span>
                                     </div>
                                 </div>
@@ -132,12 +127,9 @@
                                         <span id="productSize" style="color: white;">12cm</span>
                                     </div>
                                 </div>
-                                <div class="cake-title">
-                                    <div class="cake_btn">
-                                        <p>ĐẶT TOUR &bull;
-                                        </p>
-                                    </div>
-                                </div>
+                                <button class="cake_btn" onclick="orderDetail()">ĐẶT TOUR &bull;
+                                </button><br>
+                                
                                 <div class="cake-title">
                                     <input type="button" value="THÔNG TIN TOUR" data-toggle="collapse"
                                         data-target="#decribe">
@@ -159,6 +151,7 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-12">
                         <i style="color: red;">Lưu ý</i>
                         <i style="font-size:15px; color: rgb(177, 99, 10);">
                             <br><p>GIÁ TOUR BÁO GỒM:<br>
@@ -220,6 +213,7 @@
                             Nếu hủy hoặc hoãn tour từ 01-04 ngày trước ngày khởi hành: Chi phí huỷ tour là 100% trên giá tour du lịch.<br>
                             Thời gian hủy tour được tính cho ngày làm việc, không tính thứ Bảy, Chủ Nhật và các ngày Lễ, Tết.<br>
                         </p> 
+                    </div>
                     </div>
                 </div>
 
@@ -466,6 +460,16 @@
 
         <!-- bootrap js -->
         <script src="js/bootstrap.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              // Lấy giá trị từ phần tử có id là 'num'
+        var numValue = document.getElementById('num').textContent;
+    
+        // Lưu giá trị vào localStorage
+        localStorage.setItem('numValue', numValue);
+            });
+        </script>
 
 </body>
 

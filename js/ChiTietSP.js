@@ -58,7 +58,7 @@ function getProductById(id) {
             introduction: "",
         },
         {
-            id: 5,
+            id: 6,
             name: "Du Lịch Miền Tây: Tiền Giang - Cần Thơ - Vĩnh Long",
             price: "2.590.000vnđ",
             image: "images/TrongNuoc/TienGiang_01.jpg",
@@ -83,4 +83,11 @@ function showDetail(productId) {
 
     // Chuyển sang trang chi tiết sản phẩm
     window.location.href = 'results.html';
+}
+
+
+function orderDetail() {
+    var productId = localStorage.getItem('selectedProduct');
+    localStorage.setItem('selectedProduct', productId);
+    window.location.href = 'order_Details.html';
 }

@@ -1664,11 +1664,36 @@ h4 {
 
 .cake_btn {
     border: 2px solid rgb(177, 99, 10);
-    line-height: 100px;
-    width: 400px;
+    line-height: 50px;
+    width: 200px;
     padding: 10px;
     text-align: center;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    background: #f3f3f5;
+    box-shadow: 9px 9px 12px #b2b2b3, -9px -9px 12px #ffffff;
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    color: #0d0d25;
+    text-transform: capitalize;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    outline: none !important;
+    transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
+    overflow: hidden;
+    position: relative;
 }
+
+.cake_btn:hover {
+    border-color: #0d0d25;
+    box-shadow: inset 9px 9px 12px #cccccc, inset -9px -9px 12px #ffffff;
+    color: #0d0d25;
+}
+
 
 .cake1_btn p {
     color: rgb(177, 99, 10);
