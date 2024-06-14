@@ -264,7 +264,7 @@ ul {
     }
 }
 
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
     .section {
         padding-top: 85px;
         padding-bottom: 85px;
@@ -397,7 +397,7 @@ ul {
     body {
         height: auto !important;
     }
-}
+} */
 
 @media (max-width: 575px) {
     .container {
