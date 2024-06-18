@@ -21,6 +21,30 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="js/ChiTietSP.js"></script>
 
+    <style>
+        .banner-img {
+            transition: background-image 1s ease-in-out;
+        }
+    </style>
+
+    <script>
+        const images = [
+            'images/main-b.jpg',
+            'images/GioiThieu_03.jpg',
+            'images/GioiThieu_04.jpg',
+            'images/GioiThieu_05.jpg'
+        ];
+        let currentImageIndex = 0;
+
+        function changeImage() {
+            const bannerImg = document.getElementById('banner-img');
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            bannerImg.style.backgroundImage = `url(${images[currentImageIndex]})`;
+        }
+
+        setInterval(changeImage, 3000);
+    </script>
+
 
 <body class="body-fixed">
     <!-- start of header  -->
@@ -41,8 +65,6 @@
                             <ul class="menu food-nav-menu">
                                 <li><a href="index.html">Trang chủ</a></li>
                                 <li><a href="introduce.html">Giới thiệu</a></li>
-                                <li><a href="contact.html">Liên hệ</a></li>
-                                <li><a href="news.html">Phát triển bền vững</a></li>
                                 <li>
                                     <a>Sản phẩm</a>
                                     <ul>
@@ -57,6 +79,9 @@
                                         </li>
                                     </ul>
                                 </li>
+                                <li><a href="develop.html">Phát triển bền vững</a></li>
+                                <li><a href="contact.html">Liên hệ</a></li>
+                                
                                 <!-- Thêm nav con -->
                                 <!-- Tour du lịch: nội địa, inbound, outbound
                                     Lưu trú-->
@@ -88,7 +113,7 @@
 
     <div id="viewport">
         <div id="js-scroll-content">
-            <br><br><br>
+            <div style="margin-top: 200px;">
             <!-- start of banner  -->
             <section class="main-banner" id="home">
                 <div class="js-parallax-scene">
@@ -106,7 +131,7 @@
                                 <div class="banner-text">
                                     <h1 class="h1-title">
                                         Chào mừng đến với <br>
-                                        <span>BT Tour</span>
+                                        <span>Bến Thành Tourist</span>
                                     </h1>
                                     <!-- <p>Đà Nẵng - Cần Thơ</p> -->
                                     <div class="banner-btn mt-4">
@@ -116,9 +141,9 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="banner-img-wp">
-                                    <div class="banner-img" style="background-image: url(images/main-b.jpg);">
-                                    </div>
+                                    <div id="banner-img" class="banner-img" style="background-image: url(images/main-b.jpg);">
                                 </div>
+                            </div>
                                 <div class="banner-img-text mt-4 m-auto">
                                     <p>Khám phá lịch sử - văn hóa - con người Việt Nam</p>
                                 </div>
@@ -520,8 +545,8 @@
                                                     <a href="index.html" class="footer-active-menu">Trang chủ</a>
                                                 </li>
                                                 <li><a href="introduce.html">Giới thiệu</a></li>
+                                                <li><a href="develop.html">Phát triển bền vững</a></li>
                                                 <li><a href="contact.html">Liên hệ</a></li>
-                                                <li><a href="news.html">Phát triển bền vững</a></li>
                                             </ul>
                                         </div>
                                         <div class="footer-menu">
